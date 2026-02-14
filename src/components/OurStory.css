@@ -1,16 +1,16 @@
-/* Wrapper */
+
 .our-story {
   font-family: "Segoe UI", sans-serif;
   color: #1f2937;
 }
 
-/* Hero */
+
 .hero {
   height: 60vh;
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-top: 90px; /* navbar overlap fix */
+  padding-top: 90px; 
 }
 
 .overlay {
