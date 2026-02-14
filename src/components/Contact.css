@@ -1,0 +1,85 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.contact-header p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Cards Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.contact-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-card.delay {
+  transition-delay: 0.3s;
+}
+
+.contact-card h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Contact Items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #e63946;
+}
+
+/* Office Hours */
+.hours div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    width: 100%;
+  }
+
+  .contact-header h1 {
+    font-size: 32px;
+  }
+}
