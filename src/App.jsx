@@ -11,11 +11,12 @@ import Volunteers from "./components/Volunteers";
 import Hero from "./components/Hero";
 import OurStory from "./components/OurStory";
 import Contact from "./components/Contact";
+import VolunteerSection from "./components/VolunteerSection";
 
 const Home = () => (
   <>
     
-      <Hero/>
+    <Hero/>
     <Mission />
     <Initiatives />
     <Stats />
@@ -33,7 +34,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/story" element={<OurStory/>} />
         <Route path="/initiatives" element={<Initiatives />} />
-        <Route path="/volunteer" element={<h1>Volunteer</h1>} />
+        <Route path="/volunteer" element={<VolunteerSection/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/donate" element={<h1>Donate</h1>} />
       </Routes>
