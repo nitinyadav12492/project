@@ -7,7 +7,7 @@ const OurStory = () => {
       
       
       <section
-        className="hero"
+        className="herosection"
         style={{ backgroundImage: "url('/nitin.avif')" }}
       >
         <div className="overlay">

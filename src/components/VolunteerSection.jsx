@@ -2,6 +2,28 @@ import React, { useState } from "react";
 import "./VolunteerSection.css";
 
 const VolunteerSection = () => {
+  const interestsList = [
+  "Social Media",
+  "Marketing / Branding",
+  "Content Writing / Blogging / Copywriting",
+  "Fundraising",
+  "Presentation",
+  "Photography",
+  "Videography",
+  "Internet / Web",
+  "Teaching / Training / Coaching",
+  "Illustration / Design / Drawing",
+  "Multimedia / Animation",
+  "Event Planning/Management",
+  "Social Volunteering",
+  "Community Management/Engagement",
+  "Data Entry",
+  "Caregivers",
+  "Poster Creation"
+];
+const [selectedInterests, setSelectedInterests] = useState([]);
+
+   
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,16 +47,25 @@ const VolunteerSection = () => {
     console.log(formData);
     alert("Form Submitted Successfully!");
   };
+const handleCheckboxChange = (interest) => {
+  if (selectedInterests.includes(interest)) {
+    setSelectedInterests(
+      selectedInterests.filter((item) => item !== interest)
+    );
+  } else {
+    setSelectedInterests([...selectedInterests, interest]);
+  }
+};
 
   return (
     <div>
-      <div className="hero">
+      <div className="vsection">
         <h1>Volunteer With Us</h1>
         <p>Be a part of our noble cause by being the volunteers of our foundation.</p>
       </div>
 
-      <div className="container">
-        <h2>Volunteer Registration</h2>
+      <div className="container1">
+        <h1>Volunteer Registration</h1>
 
         <form onSubmit={handleSubmit}>
 
@@ -125,6 +156,23 @@ const VolunteerSection = () => {
               </div>
             </div>
           </div>
+          <div className="interests">
+  <label>Interests:</label>
+
+  <div className="checkbox-grid">
+    {interestsList.map((interest, index) => (
+      <label key={index}>
+        <input
+          type="checkbox"
+          checked={selectedInterests.includes(interest)}
+          onChange={() => handleCheckboxChange(interest)}
+        />
+        {interest}
+      </label>
+    ))}
+  </div>
+</div>
+
 
           <button type="submit">Submit</button>
 

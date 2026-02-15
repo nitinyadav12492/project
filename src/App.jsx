@@ -13,6 +13,7 @@ import OurStory from "./components/OurStory";
 import Contact from "./components/Contact";
 import VolunteerSection from "./components/VolunteerSection";
 
+
 const Home = () => (
   <>
     
@@ -34,9 +35,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/story" element={<OurStory/>} />
         <Route path="/initiatives" element={<Initiatives />} />
-        <Route path="/volunteer" element={<VolunteerSection/>} />
+        <Route path="/volunteers" element={<VolunteerSection/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/donate" element={<h1>Donate</h1>} />
+        <Route path="/donate" element={<></>} />
       </Routes>
 
       <Footer />

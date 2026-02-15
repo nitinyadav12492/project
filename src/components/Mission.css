@@ -1,8 +1,13 @@
+
+
 .mission {
-  background: linear-gradient(135deg, #e11d48, #be123c);
+  background: linear-gradient(135deg, #e11d48, #be123c, #9f1239);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite alternate;
   padding: 80px 20px;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 .mission-container {
@@ -10,19 +15,45 @@
   margin: auto;
 }
 
+
 .mission h2 {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeUp 5s ease forwards;
 }
+
 
 .mission p {
   font-size: 20px;
   line-height: 1.8;
   font-weight: 400;
+  opacity: 0;
+  animation: fadeUp 5s ease forwards;
+  animation-delay: 0.4s;
 }
 
-/* Responsive */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 @media (max-width: 768px) {
   .mission h2 {
     font-size: 32px;
